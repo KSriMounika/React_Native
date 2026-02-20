@@ -1,14 +1,15 @@
 import react from "react";
-import { View, StyleSheet, StatusBar, Text } from "react-native";
+import { View, StyleSheet, StatusBar, Text, TextInput } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-const Component = () => {
+const ReactComponent = () => {
   const insets = useSafeAreaInsets();
-  console.log(insets);
+  // console.log(insets);
 
   return (
     <>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle="light-content" /
+      >
       
       
       <View
@@ -17,15 +18,17 @@ const Component = () => {
           { height: insets.top }
         ]}
       />
-
+ 
       <View style={styles.container}>
         <Text style={styles.text}>Aditya University</Text>
       </View>
+      
+     
     </>
   );
 };
 
-export default Component;
+export default ReactComponent;
 
 const styles = StyleSheet.create({
   statusBar: {
