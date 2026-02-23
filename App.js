@@ -22,31 +22,31 @@
 //   },
 // });
 
-import React from "react";
-import { SafeAreaProvider } from "react-native-safe-area-context";
-import ReactComponent from "./ReactComponent";
-import { PaperProvider } from "react-native-paper";
-import MyComponent from "./MyComponent";
-import DialogComponent from "./DialogComponent";
-import CardComponent from "./CardComponent";
-import SnackComponent from "./SnackComponent";
-import ListComponent from "./ListComponent";
+// import React from "react";
+// import { SafeAreaProvider } from "react-native-safe-area-context";
+// import ReactComponent from "./ReactComponent";
+// import { PaperProvider } from "react-native-paper";
+// import MyComponent from "./MyComponent";
+// import DialogComponent from "./DialogComponent";
+// import CardComponent from "./CardComponent";
+// import SnackComponent from "./SnackComponent";
+// import ListComponent from "./ListComponent";
 
-const App = () => {
-  return (
-    <SafeAreaProvider>
-      <PaperProvider>
-       {/* <MyComponent /> */}
-       {/* <DialogComponent/> */}
-       {/* <CardComponent /> */}
-       {/* <SnackComponent /> */}
-       <ListComponent />
-      </PaperProvider>
-    </SafeAreaProvider> 
-  );
-};
+// const App = () => {
+//   return (
+//     <SafeAreaProvider>
+//       <PaperProvider>
+//        <MyComponent />
+//        <DialogComponent/>
+//        <CardComponent />
+//        <SnackComponent />
+//        <ListComponent />
+//       </PaperProvider>
+//     </SafeAreaProvider> 
+//   );
+// };
 
-export default App;
+// export default App;
 
 // import react from "react";
 // import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -101,3 +101,47 @@ export default App;
 //     alignItems: "center",
 //   },
 // });
+
+
+
+
+
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+import { Icon } from 'react-native-paper';
+import Home from './Home';
+import Contact from './Contact';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import {Icon} from 'react-native-paper';
+import { createStackNavigator } from '@react-navigation/stack';
+const Stack = createNativeStackNavigator()
+export default function App() {
+  return (
+   <NavigationContainer>
+    <Stack.Navigator
+      screenOptions={{
+        // title:"HAI"
+        // headerShown:false
+        // headerStyle:{
+        //   backgroundColor:"red"
+        // }
+        // headerTintColor:"red"
+        // headerTitleStyle:{
+        //   fontSize:26
+        // }
+        headerTitleAlign:"center",
+        headerRight:()=> <Icon source={"bell"} size={24}/>,
+        // headerLeft:() => <Icon source={"home"} size={24}/>,
+        headerBackButtonDisplayMode:"minimal",
+        animation:"fade"
+
+      }}
+    >
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Contact" component={Contact} />
+    </Stack.Navigator>
+   </NavigationContainer>
+  );
+}
+
