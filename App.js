@@ -189,11 +189,13 @@ import react from "react";
 import TopbarNavigation from "./TopbarNavigation";
 import DrawerNavigation from "./DrawerNavigation";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import Image_Sharing from "./Image_Sharing";
 const App = () =>{
   return(
     <SafeAreaProvider>
       {/* <TopbarNavigation /> */}
-      <DrawerNavigation />
+      {/* <DrawerNavigation /> */}
+      <Image_Sharing />
     </SafeAreaProvider>
   )
 }
