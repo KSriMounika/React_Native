@@ -190,14 +190,19 @@ import TopbarNavigation from "./TopbarNavigation";
 import DrawerNavigation from "./DrawerNavigation";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Image_Sharing from "./Image_Sharing";
+import Camera from "./Camera";
+import Microphone from "./Microphone";
 const App = () =>{
   return(
     <SafeAreaProvider>
-      {/* <TopbarNavigation /> */}
-      {/* <DrawerNavigation /> */}
-      <Image_Sharing />
+      {/* <TopbarNavigation />
+      <DrawerNavigation />
+      <Image_Sharing /> */}
+      {/* <Camera /> */}
+      < Microphone />
     </SafeAreaProvider>
   )
 }
 
 export default App;
+
