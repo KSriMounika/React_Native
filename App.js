@@ -192,6 +192,7 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import Image_Sharing from "./Image_Sharing";
 import Camera from "./Camera";
 import Microphone from "./Microphone";
+import SecurityPackagesAccessing from "./SecurityPackagesAccessing";
 const App = () =>{
   return(
     <SafeAreaProvider>
@@ -199,7 +200,8 @@ const App = () =>{
       <DrawerNavigation />
       <Image_Sharing /> */}
       {/* <Camera /> */}
-      < Microphone />
+      {/* < Microphone /> */}
+      <SecurityPackagesAccessing />
     </SafeAreaProvider>
   )
 }
