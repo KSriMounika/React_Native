@@ -16,7 +16,9 @@
       "supportsTablet": true
     },
     "android": {
-       "permissions": ["RECORD_AUDIO"],
+      "permissions": [
+        "RECORD_AUDIO"
+      ],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -26,6 +28,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "f524904d-ac0f-4c5b-9867-aa3610d12f1b"
+      }
     }
   }
 }
